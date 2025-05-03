@@ -1,5 +1,6 @@
 from typing import Any
 
+
 def filter_by_state(list_info: list[dict[str, Any]], state: str = 'EXECUTED') -> list[dict[str, Any]]:
     """
     Функция для сортировки по ключу 'state'.
