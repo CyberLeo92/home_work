@@ -92,3 +92,17 @@ def transactions_for_test() -> list[dict]:
             "to": "Счет 14211924144426031657",
         },
     ]
+
+
+@pytest.fixture
+def correct_path():
+    """Данные для функции test_get_info_about_transactions"""
+    file = '..\\data\\operations.json'
+    return file
+
+
+@pytest.fixture
+def incorrect_path():
+    """Данные для функции test_get_info_about_transactions_invalid"""
+    file = ''
+    return file
