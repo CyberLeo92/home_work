@@ -8,7 +8,7 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
 
-def currency_for_usd_or_euro(transaction: dict) -> str | None | Any:
+def currency_for_usd_or_euro(transaction: dict) -> str |float | None | Any:
     """Функция принимает транзакцию и возвращает ее сумму. Если в транзакции валюта не является рублями,
     то функция конвертирует ее в рубли"""
     try:
@@ -29,7 +29,7 @@ def currency_for_usd_or_euro(transaction: dict) -> str | None | Any:
                 return "Проблема с сервером"
             else:
                 result = response.json()
-                return result["result"]
+                return float(result["result"])
         except requests.exceptions.RequestException as e:
             return f"Проблема с сервером: {e}"
 
