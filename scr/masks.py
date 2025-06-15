@@ -16,6 +16,7 @@ def get_mask_card_number(card_number: str) -> str:
     """
     logger.info('Проверяем точно ли введенные данные карты ровны 16 символам')
     if len(card_number) == 16 and card_number.isdigit():
+        logger.info(f'Успешно создана маска для карты: {card_number[:4]} **** **** {card_number[12:]}')
         return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[12:]}"
     else:
         logger.error('Введен неверный номер карты"')  # Введенные данные не корректны

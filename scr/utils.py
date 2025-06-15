@@ -18,6 +18,7 @@ def financial_transaction_data(filename: str) -> list[dict] | Any:
             utils_data = json.load(file)
             if type(utils_data) is not list:
                 logger.error('Ошибка TypeError')
+            logger.info(f'Успешно загружено {len(utils_data)} записей из файла {filename}')
             return utils_data
     except FileNotFoundError as ex:
         logger.error(f'Ошибка {ex}]')
