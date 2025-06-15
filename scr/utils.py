@@ -13,11 +13,11 @@ logger.setLevel(logging.DEBUG)
 def financial_transaction_data(filename: str) -> list[dict] | Any:
     """ Принимает на вход путь до JSON-файла и возвращает список словарей с данными о финансовых транзакциях"""
     try:
-        logger.info(f'Производиться поиск файла для чтения')
+        logger.info('Производиться поиск файла для чтения')
         with open(filename, encoding='utf-8') as file:
             utils_data = json.load(file)
             if type(utils_data) is not list:
-                logger.error(f'Ошибка TypeError')
+                logger.error('Ошибка TypeError')
             return utils_data
     except FileNotFoundError as ex:
         logger.error(f'Ошибка {ex}]')
@@ -28,7 +28,7 @@ def financial_transaction_data(filename: str) -> list[dict] | Any:
         print("Ошибка декодирования файла")
         return []
     finally:
-        logger.info(f'Завершение работы')
+        logger.info('Завершение работы')
         return None
 
 

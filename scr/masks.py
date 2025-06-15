@@ -14,11 +14,11 @@ def get_mask_card_number(card_number: str) -> str:
     в виде числа и возвращает маску номера по правилу
     XXXX XX** **** XXXX
     """
-    logger.info(f'Проверяем точно ли введенные данные карты ровны 16 символам')
+    logger.info('Проверяем точно ли введенные данные карты ровны 16 символам')
     if len(card_number) == 16 and card_number.isdigit():
         return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[12:]}"
     else:
-        logger.error(f'Введен неверный номер карты"')  # Введенные данные не корректны
+        logger.error('Введен неверный номер карты"')  # Введенные данные не корректны
         return ""
 
 
@@ -32,11 +32,11 @@ def get_mask_account(account_number: str) -> str:
     Функция принимает на вход номер счета в виде числа
     и возвращает маску номера по правилу **XXXX
     """
-    logger.info(f'Проверяем точно ли введенные номера счета ровны 20 символам')
+    logger.info('Проверяем точно ли введенные номера счета ровны 20 символам')
     if len(account_number) == 20 and account_number.isdigit():
         return f"**{account_number[-4:]}"
     else:
-        logger.error(f'Введен неверный номер счёта')
+        logger.error('Введен неверный номер счёта')
         return "Введен неверный номер счёта"
 
 
