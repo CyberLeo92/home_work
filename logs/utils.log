@@ -1,3 +1,19 @@
 2025-06-15 16:42:48,916 utils.py INFO: Производиться поиск файла для чтения
 2025-06-15 16:45:50,996 utils.py INFO: Производиться поиск файла для чтения
 2025-06-15 16:45:50,999 utils.py INFO: Завершение работы
+2025-06-22 15:39:05,315 financial.py INFO: Успешно прочитан CSV-файл: dummy_path.csv
+2025-06-22 15:39:05,318 financial.py ERROR: Файл non_existent.csv не найден
+2025-06-22 15:39:05,325 financial.py ERROR: Неверная структура CSV: отсутствует столбец 'date'
+2025-06-22 15:39:05,326 financial.py ERROR: Ошибка при чтении CSV: 'date'
+2025-06-22 15:39:05,332 financial.py INFO: Успешно прочитан Excel-файл: dummy_path.xlsx
+2025-06-22 15:39:05,337 financial.py ERROR: Файл non_existent.xlsx не найден
+2025-06-22 15:39:05,344 financial.py ERROR: В файле Excel отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:39:05,344 financial.py ERROR: Ошибка при чтении Excel: Отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:39:05,362 financial.py INFO: Успешно прочитан CSV-файл: ../data/transactions.csv
+2025-06-22 15:39:05,853 financial.py INFO: Успешно прочитан Excel-файл: ../data/transactions_excel.xlsx
+2025-06-22 15:39:05,957 utils.py INFO: Производиться поиск файла для чтения
+2025-06-22 15:39:05,959 utils.py ERROR: Ошибка Expecting value: line 1 column 1 (char 0)]
+2025-06-22 15:39:05,959 utils.py INFO: Завершение работы
+2025-06-22 15:39:06,056 utils.py INFO: Производиться поиск файла для чтения
+2025-06-22 15:39:06,057 utils.py ERROR: Ошибка [Errno 2] No such file or directory: '']
+2025-06-22 15:39:06,057 utils.py INFO: Завершение работы

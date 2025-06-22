@@ -1,0 +1,48 @@
+2025-06-22 14:10:22,538 financial_transactions.py INFO: Успешно прочитан Excel-файл: ../data/transactions_excel.xlsx
+2025-06-22 14:10:58,698 financial_transactions.py INFO: Успешно прочитан CSV-файл: ../data/transactions.csv
+2025-06-22 14:10:59,271 financial_transactions.py INFO: Успешно прочитан Excel-файл: ../data/transactions_excel.xlsx
+2025-06-22 15:16:31,156 financial_transactions.py ERROR: Файл non_existent.csv не найден
+2025-06-22 15:16:37,260 financial_transactions.py ERROR: Неверная структура CSV: отсутствует столбец 'date'
+2025-06-22 15:16:37,262 financial_transactions.py ERROR: Ошибка при чтении CSV: 'date'
+2025-06-22 15:17:42,377 financial_transactions.py ERROR: Неверная структура CSV: отсутствует столбец 'date'
+2025-06-22 15:17:42,378 financial_transactions.py ERROR: Ошибка при чтении CSV: 'date'
+2025-06-22 15:18:00,701 financial_transactions.py ERROR: В файле Excel отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:18:00,701 financial_transactions.py ERROR: Ошибка при чтении Excel: Отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:18:04,073 financial_transactions.py ERROR: В файле Excel отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:18:04,074 financial_transactions.py ERROR: Ошибка при чтении Excel: Отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:18:08,055 financial_transactions.py ERROR: Файл non_existent.xlsx не найден
+2025-06-22 15:23:04,779 financial_transactions.py ERROR: Файл non_existent.csv не найден
+2025-06-22 15:23:09,182 financial_transactions.py INFO: Успешно прочитан CSV-файл: dummy_path.csv
+2025-06-22 15:23:55,579 financial_transactions.py INFO: Успешно прочитан CSV-файл: dummy_path.csv
+2025-06-22 15:23:59,219 financial_transactions.py ERROR: Файл non_existent.csv не найден
+2025-06-22 15:24:43,415 financial_transactions.py INFO: Успешно прочитан Excel-файл: dummy_path.xlsx
+2025-06-22 15:25:13,281 financial_transactions.py INFO: Успешно прочитан CSV-файл: dummy_path.csv
+2025-06-22 15:25:19,129 financial_transactions.py INFO: Успешно прочитан Excel-файл: dummy_path.xlsx
+2025-06-22 15:31:38,391 financial.py INFO: Успешно прочитан Excel-файл: ../data/transactions_excel.xlsx
+2025-06-22 15:33:35,187 financial.py INFO: Успешно прочитан Excel-файл: ../data/transactions_excel.xlsx
+2025-06-22 15:39:05,315 financial.py INFO: Успешно прочитан CSV-файл: dummy_path.csv
+2025-06-22 15:39:05,318 financial.py ERROR: Файл non_existent.csv не найден
+2025-06-22 15:39:05,325 financial.py ERROR: Неверная структура CSV: отсутствует столбец 'date'
+2025-06-22 15:39:05,326 financial.py ERROR: Ошибка при чтении CSV: 'date'
+2025-06-22 15:39:05,332 financial.py INFO: Успешно прочитан Excel-файл: dummy_path.xlsx
+2025-06-22 15:39:05,337 financial.py ERROR: Файл non_existent.xlsx не найден
+2025-06-22 15:39:05,344 financial.py ERROR: В файле Excel отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:39:05,344 financial.py ERROR: Ошибка при чтении Excel: Отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:39:05,362 financial.py INFO: Успешно прочитан CSV-файл: ../data/transactions.csv
+2025-06-22 15:39:05,853 financial.py INFO: Успешно прочитан Excel-файл: ../data/transactions_excel.xlsx
+2025-06-22 15:39:05,957 utils.py INFO: Производиться поиск файла для чтения
+2025-06-22 15:39:05,959 utils.py ERROR: Ошибка Expecting value: line 1 column 1 (char 0)]
+2025-06-22 15:39:05,959 utils.py INFO: Завершение работы
+2025-06-22 15:39:06,056 utils.py INFO: Производиться поиск файла для чтения
+2025-06-22 15:39:06,057 utils.py ERROR: Ошибка [Errno 2] No such file or directory: '']
+2025-06-22 15:39:06,057 utils.py INFO: Завершение работы
+2025-06-22 15:39:26,369 financial.py INFO: Успешно прочитан CSV-файл: dummy_path.csv
+2025-06-22 15:39:26,374 financial.py ERROR: Файл non_existent.csv не найден
+2025-06-22 15:39:26,384 financial.py ERROR: Неверная структура CSV: отсутствует столбец 'date'
+2025-06-22 15:39:26,385 financial.py ERROR: Ошибка при чтении CSV: 'date'
+2025-06-22 15:39:26,392 financial.py INFO: Успешно прочитан Excel-файл: dummy_path.xlsx
+2025-06-22 15:39:26,395 financial.py ERROR: Файл non_existent.xlsx не найден
+2025-06-22 15:39:26,400 financial.py ERROR: В файле Excel отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:39:26,401 financial.py ERROR: Ошибка при чтении Excel: Отсутствуют столбцы: ['state', 'date', 'amount', 'currency_name', 'currency_code', 'description', 'from', 'to']
+2025-06-22 15:39:26,415 financial.py INFO: Успешно прочитан CSV-файл: ../data/transactions.csv
+2025-06-22 15:39:26,957 financial.py INFO: Успешно прочитан Excel-файл: ../data/transactions_excel.xlsx
