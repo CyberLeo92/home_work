@@ -1,3 +1,4 @@
+import pandas as pd
 import pytest
 
 
@@ -106,3 +107,28 @@ def incorrect_path():
     """Данные для функции test_get_info_about_transactions_invalid"""
     file = ''
     return file
+
+
+@pytest.fixture
+def csv_mock_data() -> str:
+    """ Фикстура с mock-данными для функции test_read_csv_success """
+    return """id;state;date;amount;currency_name;currency_code;description;from;to
+1;EXECUTED;2023-10-01;100;USD;840;Payment;Card 1234;Account 5678
+2;PENDING;2023-10-02;200;EUR;978;Transfer;;Account 9999
+"""
+
+
+@pytest.fixture
+def excel_mock_data():
+    """ Фикстура с mock-данными для функции test_read_excel_success"""
+    return pd.DataFrame({
+        "id": [1, 2],
+        "state": ["EXECUTED", "PENDING"],
+        "date": ["2023-10-01", "2023-10-02"],
+        "amount": [100, 200],
+        "currency_name": ["USD", "EUR"],
+        "currency_code": ["840", "978"],
+        "description": ["Payment", "Transfer"],
+        "from": ["Card 1234", ""],
+        "to": ["Account 5678", "Account 9999"],
+    })
