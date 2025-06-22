@@ -103,6 +103,23 @@ for _ in range(2):
 происходит обращение к внешнему API для получения текущего курса валют и конвертации суммы операции в рубли.
 Для конвертации валюты воспользуйтесь [Exchange Rates Data AP](https://apilayer.com/marketplace/exchangerates_data-api)
 
+Функция `read_transactions_from_csv` считывающая CSV-файл и возвращающая список словарей.
+
+    Ожидаются столбы в файле:
+        - id, state, date, amount, currency_name, currency_code, description, from, to
+    Параметры файла: путь к SCV-файла
+    Возвращает: список словарей с транзакциями
+    Ошибки, которые обрабатываются: FileNotFoundError, KeyError, csv.Error
+
+Функция `read_transactions_from_excel` считывающая Excel-файл и возвращающая список словарей.
+
+    Ожидаются столбы в файле:
+        - id, state, date, amount, currency_name, currency_code, description, from, to
+    Параметры файла: путь к Excel-файла
+    Возвращает: список словарей с транзакциями
+    Ошибки, которые обрабатываются: FileNotFoundError, ValueError, pd.errors.EmptyDataError
+
+
 #### _Генераторы_:
 Генератор `transaction_descriptions`,принимает список словарей с транзакциями 
 и возвращает описание каждой операции по очереди.
