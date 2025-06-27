@@ -2,7 +2,7 @@ from typing import Any
 
 import pytest
 
-from scr.processing import filter_by_state, sort_by_date
+from scr.processing import filter_by_state, sort_by_date, process_bank_search, process_bank_operations
 
 
 def test_filter_by_executed(filter_state: list[dict[str, Any]]) -> None:
@@ -34,3 +34,39 @@ def test_sort_by_date(received_data: list[dict], expected_data: list[dict]) -> N
 def test_sort_by_date_incorrect(incorrect_sort_date: list[dict]) -> None:
     with pytest.raises(ValueError):
         sort_by_date(incorrect_sort_date)
+
+
+def test_process_bank_search():
+    transactions = [
+        {"description": "Payment for services"},
+        {"description": "Grocery shopping"},
+        {"description": "Monthly salary"},
+        {"description": "Service fee"},
+    ]
+
+    result = process_bank_search(transactions, "service")
+    assert len(result) == 2
+    assert result[0]["description"] == "Payment for services"
+    assert result[1]["description"] == "Service fee"
+
+    # Тест на регистронезависимость
+    result = process_bank_search(transactions, "SALARY")
+    assert len(result) == 1
+    assert result[0]["description"] == "Monthly salary"
+
+
+def test_process_bank_operations():
+    transactions = [
+        {"description": "Transfer"},
+        {"description": "Payment"},
+        {"description": "Transfer"},
+        {"description": "Withdrawal"},
+        {"description": "Payment"},
+    ]
+
+    categories = ["Transfer", "Payment", "Deposit"]
+    result = process_bank_operations(transactions, categories)
+
+    assert result == {"Transfer": 2, "Payment": 2}
+    assert "Deposit" not in result
+
