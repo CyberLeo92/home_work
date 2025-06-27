@@ -1,4 +1,4 @@
-from scr import utils, processing, widget
+from scr import processing, utils, widget
 from scr.masks import get_mask_account, get_mask_card_number
 
 
@@ -22,7 +22,7 @@ def main_old() -> None:
 
 
 def main():
-    print ("""Привет! Добро пожаловать в программу работу с банковскими транзакциями.
+    print("""Привет! Добро пожаловать в программу работу с банковскими транзакциями.
 Выберите необходимый пункт меню:
    1. Получить информацию о транзакциях из JSON-файла
    2. Получить информацию о транзакциях из CSV-файла
@@ -60,7 +60,7 @@ def main():
 
         if state in valid_states:
             print(f"Операции отфильтрованы по статусу '{state}'")
-            filtered_transactions = processing.filter_by_state(transactions,state)
+            filtered_transactions = processing.filter_by_state(transactions, state)
             break
         else:
             print(f"Статус операции '{state}' недоступен.")
@@ -109,7 +109,5 @@ def main():
         print(f"Сумма: {amount} {currency}\n")
 
 
-
 if __name__ == "__main__":
     main()
-
