@@ -32,9 +32,9 @@ def financial_transaction_data(filename: str) -> list[dict] | Any:
     except Exception as e:
         logger.error(f'Ошибка {e}')
         return []
-    finally:
-        logger.info('Завершение работы')
-        return None
+    # finally:
+    #     logger.info('Завершение работы')
+    #     return None
 
 
 if __name__ == '__main__':
