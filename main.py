@@ -66,9 +66,19 @@ def main():
             print(f"Статус операции '{state}' недоступен.")
 
     sort_choice = input("Отсортировать операции по дате? (Да/Нет): ").lower().strip()
-    if sort_choice in {"да", "yes", "y"}:
-        direction = input("Отсортировать по возрастанию или по убыванию? ").lower().strip()
-        reverse = "убыванию" in direction or "desc" in direction
+    if sort_choice in {"да", "yes"}:
+        while True:
+            direction = input("Сортировать по убыванию? (Да/Нет): ").lower().strip()
+
+            if direction in {"да", "yes"}:
+                reverse = True
+                break
+            elif direction in {"нет", "no"}:
+                reverse = False
+                break
+            else:
+                print("Пожалуйста, введите 'Да' или 'Нет'.")
+
         filtered_transactions = processing.sort_by_date(filtered_transactions, reverse)
 
     # Фильтрация рублевых транзакций
