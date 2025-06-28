@@ -20,13 +20,17 @@ def filter_by_state(list_info: List[Dict[str, Any]], state: str = "EXECUTED") ->
     return new_list
 
 
-def sort_by_date(list_of_values: List[Dict], reverse: bool = True) -> List[Dict]:
-    """Функция сортировки даты"""
+def sort_by_date(list_of_values: list[dict], reverse: bool = True) -> list[dict]:
+    """Функция сортировки по дате с учётом времени"""
     try:
-        return sorted(list_of_values, key=lambda x: datetime.strptime(x["date"], "%Y-%m-%d"), reverse=reverse)
-    except ValueError:
-        print("Данные введены неверно")
-        raise  # Повторно выбрасываем исключение
+        return sorted(
+            list_of_values,
+            key=lambda x: datetime.fromisoformat(x["date"]),  # Изменил - полный ISO формат для парсинга
+            reverse=reverse
+        )
+    except ValueError as e:
+        print(f"Ошибка формата даты: {e}")
+        raise
 
 
 def process_bank_search(data: List[Dict[str, Any]], search: str) -> List[Dict[str, Any]]:
