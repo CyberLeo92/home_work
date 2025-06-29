@@ -5,6 +5,8 @@ def mask_account_card(card_info: str) -> str:
     """
     Функция обрабатывает информацию как о картах и о счетах.
     """
+    if not card_info:  # Обработка пустых значений
+        return ""
     card_info_split = card_info.split()
     if "Счет" in card_info_split:
         if len(card_info_split[1]) == 20 and card_info_split[1].isdigit():

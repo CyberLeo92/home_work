@@ -29,9 +29,12 @@ def financial_transaction_data(filename: str) -> list[dict] | Any:
         logger.error(f'Ошибка {ex}]')
         print("Ошибка декодирования файла")
         return []
-    finally:
-        logger.info('Завершение работы')
-        return None
+    except Exception as e:
+        logger.error(f'Ошибка {e}')
+        return []
+    # finally:
+    #     logger.info('Завершение работы')
+    #     return None
 
 
 if __name__ == '__main__':
